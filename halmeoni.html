@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+    <!-- Header -->
+    <header class=" header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">할머니's House</div>
+                <div class="cart-icon" onclick="showSection('cart')">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <button class="nav-tab active" onclick="showSection('home')">Home</button>
+        <button class="nav-tab" onclick="showSection('menu')">Menu</button>
+        <button class="nav-tab" onclick="showSection('about')">About</button>
+        <button class="nav-tab" onclick="showSection('reviews')">Reviews</button>
+        <button class="nav-tab" onclick="showSection('contact')">Contact</button>
+    </nav>
+
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <img src="assets/img/halmeoni.png" alt="Halmeoni's House" class="hero-image">
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <h2>Featured Today</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+    <img src="assets/img/kimbap.jpeg" alt="Traditional Kimbap">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-title">Traditional Kimbap</div>
+                            <div class="menu-item-description">Fresh vegetables and rice wrapped in seaweed</div>
+                            <div class="menu-item-footer">
+                                <div class="menu-item-price">₱180</div>
+                                <button class="add-to-cart" onclick="addToCart('Traditional Kimbap', 180)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                        <img src="assets/img/dakgalbi2.jpg" alt="Dakgalbi">
+                    </div>
+                    </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-title">Spicy Dakgalbi</div>
+                            <div class="menu-item-description">Stir-fried chicken with vegetables and gochujang</div>
+                            <div class="menu-item-footer">
+                                <div class="menu-item-price">₱350</div>
+                                <button class="add-to-cart" onclick="addToCart('Spicy Dakgalbi', 350)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="content-section">
+            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px;">Our Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                <div class="menu-item-image">
+    <img src="assets/img/kimbap.jpeg" alt="Traditional Kimbap">
+</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Traditional Kimbap</div>
+                        <div class="menu-item-description">Fresh vegetables and rice wrapped in seaweed</div>
+                        <div class="menu-item-footer">
+                            <div class="menu-item-price">₱180</div>
+                            <button class="add-to-cart" onclick="addToCart('Traditional Kimbap', 180)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                <div class="menu-item-image">
+        <img src="assets/img/japchae.jpg" alt="Japchae">
+    </div>
+    <div class="menu-item-content">
+        <div class="menu-item-title">Japchae</div>
+        <div class="menu-item-description">Sweet potato noodles with vegetables</div>
+        <div class="menu-item-footer">
+            <div class="menu-item-price">₱220</div>
+            <button class="add-to-cart" onclick="addToCart('Japchae', 220)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+                <div class="menu-item">
+                <div class="menu-item-image">
+    <img src="assets/img/tteokboki.jpg" alt="Tteokbokki">
+</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Tteokbokki</div>
+                        <div class="menu-item-description">Spicy rice cakes in gochujang sauce</div>
+                        <div class="menu-item-footer">
+                            <div class="menu-item-price">₱200</div>
+                            <button class="add-to-cart" onclick="addToCart('Tteokbokki', 200)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                <div class="menu-item-image">
+                <img src="assets/img/dakgalbi2.jpg" alt="Dakgalbi">
+                </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Spicy Dakgalbi</div>
+                        <div class="menu-item-description">Stir-fried chicken with vegetables and gochujang</div>
+                        <div class="menu-item-footer">
+                            <div class="menu-item-price">₱350</div>
+                            <button class="add-to-cart" onclick="addToCart('Spicy Dakgalbi', 350)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                <div class="menu-item-image">
+                <img src="assets/img/chicken.jpeg" alt="Soy Chicken">
+                </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Korean Soy Chicken</div>
+                        <div class="menu-item-description">Crispy chicken glazed with soy-based sauce</div>
+                        <div class="menu-item-footer">
+                            <div class="menu-item-price">₱320</div>
+                            <button class="add-to-cart" onclick="addToCart('Korean Soy Chicken', 320)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                <div class="menu-item-image">
+                <img src="assets/img/kimchi.jpg" alt="Kimchi Fried Rice">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Kimchi Fried Rice</div>
+                        <div class="menu-item-description">Fried rice with fermented kimchi and vegetables</div>
+                        <div class="menu-item-footer">
+                            <div class="menu-item-price">₱250</div>
+                            <button class="add-to-cart" onclick="addToCart('Kimchi Fried Rice', 250)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                <div class="menu-item-image">
+    <img src="assets/img/samgyup.jpg" alt="Samgyeopsal">
+</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">Samgyeopsal</div>
+                        <div class="menu-item-description">Grilled pork belly with lettuce wraps</div>
+                        <div class="menu-item-footer">
+                            <div class="menu-item-price">₱400</div>
+                            <button class="add-to-cart" onclick="addToCart('Samgyeopsal', 400)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="about-content">
+                <h2>About Halmeoni's House</h2>
+                <p>Since 2022, Halmeoni's House has been serving authentic Korean cuisine from our cozy location in Mandaluyong City. What started as a home-based business has grown into a beloved local destination for Korean food lovers.</p>
+                <p>Our name "Halmeoni" means grandmother in Korean, reflecting our commitment to traditional, home-style cooking that brings comfort and warmth to every meal.</p>
+                <p>We specialize in classic Korean dishes made with fresh ingredients and traditional cooking methods, ensuring every bite captures the authentic flavors of Korea.</p>
+                
+                <div class="founders">
+                    <div class="founder">
+                        <div class="founder-avatar">👨‍🍳</div>
+                        <h3>Chef Bap</h3>
+                        <p>Head Chef & Co-owner</p>
+                    </div>
+                    <div class="founder">
+                        <div class="founder-avatar">👩‍💼</div>
+                        <h3>Carla</h3>
+                        <p>Manager & Co-owner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="content-section">
+            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px;">Customer Reviews</h2>
+            <div class="review-item">
+                <div class="review-header">
+                    <strong>CJ Frances Garibay</strong>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="review-text">The kimbap here is absolutely delicious! Fresh ingredients and perfectly seasoned rice. Will definitely order again!</div>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <strong>Keer Dela Cruz</strong>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="review-text">Amazing dakgalbi! The spice level is perfect and the chicken is so tender. Sarap talaga!</div>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <strong>Angela Javellana</strong>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="review-text">Authentic Korean flavors! The japchae reminds me of my grandmother's cooking. Highly recommend!</div>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <strong>Sydney Golez</strong>
+                    <div class="review-stars">⭐⭐⭐⭐</div>
+                </div>
+                <div class="review-text">Good portion sizes and reasonable prices. The tteokbokki is my favorite - perfect balance of sweet and spicy!</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Address:</strong><br>
+                        Mandaluyong City, Metro Manila
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Phone:</strong><br>
+                        +63 912 345 6789
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div>
+                        <strong>Hours:</strong><br>
+                        Daily: 11:00 AM - 9:00 PM
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <strong>Email:</strong><br>
+                        hello@halmeonihouse.ph
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    📍 Interactive Map Coming Soon
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart" class="content-section">
+            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px;">Your Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <h3>Total: ₱<span id="totalAmount">0</span></h3>
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="bottom-nav-item active" onclick="showSection('home')">
+            <div class="bottom-nav-icon">🏠</div>
+            Home
+        </button>
+        <button class="bottom-nav-item" onclick="showSection('menu')">
+            <div class="bottom-nav-icon">🍽️</div>
+            Menu
+        </button>
+        <button class="bottom-nav-item" onclick="showSection('about')">
+            <div class="bottom-nav-icon">ℹ️</div>
+            About
+        </button>
+        <button class="bottom-nav-item" onclick="showSection('contact')">
+            <div class="bottom-nav-icon">📞</div>
+            Contact
+        </button>
+        <button class="bottom-nav-item" onclick="showSection('cart')">
+            <div class="bottom-nav-icon">🛒</div>
+            Cart
+        </button>
+    </nav>
+
+    <script>
+        let cart = [];
+        let currentSection = 'home';
+
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+            
+            // Update nav tabs
+            const navTabs = document.querySelectorAll('.nav-tab');
+            navTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Update bottom nav
+            const bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+            bottomNavItems.forEach(item => item.classList.remove('active'));
+            
+            // Activate current section in both navs
+            const activeNavTab = Array.from(navTabs).find(tab => 
+                tab.textContent.toLowerCase() === sectionName.toLowerCase()
+            );
+            if (activeNavTab) activeNavTab.classList.add('active');
+            
+            const activeBottomNav = Array.from(bottomNavItems).find(item => 
+                item.onclick.toString().includes(sectionName)
+            );
+            if (activeBottomNav) activeBottomNav.classList.add('active');
+            
+            currentSection = sectionName;
+        }
+
+        function addToCart(itemName, price) {
+            const existingItem = cart.find(item => item.name === itemName);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: itemName,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            updateCartDisplay();
+            updateCartCount();
+            
+            // Show success feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Added!';
+            button.style.background = '#4caf50';
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#d32f2f';
+            }, 1000);
+        }
+
+        function updateCartCount() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+        }
+
+        function updateCartDisplay() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            const totalAmountElement = document.getElementById('totalAmount');
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p style="text-align: center; color: #666; padding: 40px;">Your cart is empty</p>';
+                totalAmountElement.textContent = '0';
+                return;
+            }
+            
+            let cartHTML = '';
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                cartHTML += `
+                    <div class="cart-item">
+                        <div>
+                            <strong>${item.name}</strong><br>
+                            <small>₱${item.price} x ${item.quantity}</small>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="margin-bottom: 10px;">
+                                <button onclick="changeQuantity(${index}, -1)" style="background: #f44336; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">-</button>
+                                <span style="margin: 0 10px;">${item.quantity}</span>
+                                <button onclick="changeQuantity(${index}, 1)" style="background: #4caf50; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">+</button>
+                            </div>
+                            <strong>₱${itemTotal}</strong>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsContainer.innerHTML = cartHTML;
+            totalAmountElement.textContent = total;
+        }
+
+        function changeQuantity(index, change) {
+            cart[index].quantity += change;
+            
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            
+            updateCartDisplay();
+            updateCartCount();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            
+            showDeliveryOptions();
+        }
+
+        function showDeliveryOptions() {
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            const deliveryModal = `
+                <div id="deliveryModal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: white; padding: 30px; border-radius: 15px; max-width: 350px; width: 90%; text-align: center;">
+                        <h3 style="color: #d32f2f; margin-bottom: 20px;">Choose Delivery Method</h3>
+                        <div style="margin-bottom: 20px;">
+                            <button onclick="selectDeliveryMethod('pickup')" style="width: 100%; padding: 15px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 10px; cursor: pointer; font-size: 16px;">
+                                🏪 Pickup<br>
+                                <small style="color: #666;">Ready in 15 minutes</small>
+                            </button>
+                            <button onclick="selectDeliveryMethod('delivery')" style="width: 100%; padding: 15px; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 10px; cursor: pointer; font-size: 16px;">
+                                🚚 Delivery<br>
+                                <small style="color: #666;">₱30 delivery fee • 30-45 minutes</small>
+                            </button>
+                        </div>
+                        <button onclick="closeModal()" style="background: #ccc; color: #333; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Cancel</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', deliveryModal);
+        }
+
+        function selectDeliveryMethod(method) {
+            window.selectedDeliveryMethod = method;
+            closeModal();
+            
+            // Add delivery fee if delivery is selected
+            const deliveryFee = method === 'delivery' ? 30 : 0;
+            window.deliveryFee = deliveryFee;
+            
+            showPaymentOptions();
+        }
+
+        function showPaymentOptions() {
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const finalTotal = total + (window.deliveryFee || 0);
+            
+            const paymentModal = `
+                <div id="paymentModal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: white; padding: 30px; border-radius: 15px; max-width: 350px; width: 90%; text-align: center;">
+                        <h3 style="color: #d32f2f; margin-bottom: 20px;">Choose Payment Method</h3>
+                        <div style="margin-bottom: 20px; text-align: left; padding: 15px; background: #f8f9fa; border-radius: 10px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span>Subtotal:</span>
+                                <span>₱${total}</span>
+                            </div>
+                            ${window.deliveryFee ? `<div style="display: flex; justify-content: space-between; margin-bottom: 5px;"><span>Delivery Fee:</span><span>₱${window.deliveryFee}</span></div>` : ''}
+                            <hr style="margin: 10px 0; border: none; border-top: 1px solid #ddd;">
+                            <div style="display: flex; justify-content: space-between; font-weight: bold;">
+                                <span>Total:</span>
+                                <span>₱${finalTotal}</span>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <button onclick="selectPaymentMethod('cod')" style="width: 100%; padding: 15px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 10px; cursor: pointer; font-size: 16px;">
+                                💵 Cash on ${window.selectedDeliveryMethod === 'delivery' ? 'Delivery' : 'Pickup'}
+                            </button>
+                            <button onclick="selectPaymentMethod('gcash')" style="width: 100%; padding: 15px; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 10px; cursor: pointer; font-size: 16px;">
+                                📱 GCash
+                            </button>
+                        </div>
+                        <button onclick="closeModal()" style="background: #ccc; color: #333; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Back</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', paymentModal);
+        }
+
+        function selectPaymentMethod(method) {
+            window.selectedPaymentMethod = method;
+            closeModal();
+            
+            if (method === 'gcash') {
+                showGCashPayment();
+            } else {
+                showProcessingOrder();
+            }
+        }
+
+        function showGCashPayment() {
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const finalTotal = total + (window.deliveryFee || 0);
+            
+            const gcashModal = `
+                <div id="gcashModal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: white; padding: 30px; border-radius: 15px; max-width: 350px; width: 90%; text-align: center;">
+                        <h3 style="color: #007bff; margin-bottom: 20px;">
+                            <span style="background: #007bff; color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px;">GCash</span>
+                            Payment
+                        </h3>
+                        
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                            <div style="font-size: 24px; font-weight: bold; color: #007bff; margin-bottom: 10px;">₱${finalTotal}</div>
+                            <div style="font-size: 14px; color: #666;">Scan QR Code to Pay</div>
+                        </div>
+                        
+                        <div style="background: white; padding: 20px; border: 2px solid #e0e0e0; border-radius: 10px; margin-bottom: 20px;">
+                            <div style="width: 180px; height: 180px; margin: 0 auto; background: white; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; position: relative;">
+                                <svg width="160" height="160" viewBox="0 0 160 160">
+                                    <!-- QR Code pattern -->
+                                    <rect x="0" y="0" width="20" height="20" fill="#000"/>
+                                    <rect x="20" y="0" width="20" height="20" fill="#fff"/>
+                                    <rect x="40" y="0" width="20" height="20" fill="#000"/>
+                                    <rect x="60" y="0" width="20" height="20" fill="#fff"/>
+                                    <rect x="80" y="0" width="20" height="20" fill="#000"/>
+                                    <rect x="100" y="0" width="20" height="20" fill="#fff"/>
+                                    <rect x="120" y="0" width="20" height="20" fill="#000"/>
+                                    <rect x="140" y="0" width="20" height="20" fill="#fff"/>
+                                    
+                                    <rect x="0" y="20" width="20" height="20" fill="#fff"/>
+                                    <rect x="20" y="20" width="20" height="20" fill="#000"/>
+                                    <rect x="40" y="20" width="20" height="20" fill="#fff"/>
+                                    <rect x="60" y="20" width="20" height="20" fill="#000"/>
+                                    <rect x="80" y="20" width="20" height="20" fill="#fff"/>
+                                    <rect x="100" y="20" width="20" height="20" fill="#000"/>
+                                    <rect x="120" y="20" width="20" height="20" fill="#fff"/>
+                                    <rect x="140" y="20" width="20" height="20" fill="#000"/>
+                                    
+                                    <rect x="0" y="40" width="20" height="20" fill="#000"/>
+                                    <rect x="20" y="40" width="20" height="20" fill="#fff"/>
+                                    <rect x="40" y="40" width="20" height="20" fill="#000"/>
+                                    <rect x="60" y="40" width="20" height="20" fill="#fff"/>
+                                    <rect x="80" y="40" width="20" height="20" fill="#000"/>
+                                    <rect x="100" y="40" width="20" height="20" fill="#fff"/>
+                                    <rect x="120" y="40" width="20" height="20" fill="#000"/>
+                                    <rect x="140" y="40" width="20" height="20" fill="#fff"/>
+                                    
+                                    <rect x="0" y="60" width="20" height="20" fill="#fff"/>
+                                    <rect x="20" y="60" width="20" height="20" fill="#000"/>
+                                    <rect x="40" y="60" width="20" height="20" fill="#fff"/>
+                                    <rect x="60" y="60" width="20" height="20" fill="#000"/>
+                                    <rect x="80" y="60" width="20" height="20" fill="#fff"/>
+                                    <rect x="100" y="60" width="20" height="20" fill="#000"/>
+                                    <rect x="120" y="60" width="20" height="20" fill="#fff"/>
+                                    <rect x="140" y="60" width="20" height="20" fill="#000"/>
+                                    
+                                    <rect x="0" y="80" width="20" height="20" fill="#000"/>
+                                    <rect x="20" y="80" width="20" height="20" fill="#fff"/>
+                                    <rect x="40" y="80" width="20" height="20" fill="#000"/>
+                                    <rect x="60" y="80" width="20" height="20" fill="#fff"/>
+                                    <rect x="80" y="80" width="20" height="20" fill="#000"/>
+                                    <rect x="100" y="80" width="20" height="20" fill="#fff"/>
+                                    <rect x="120" y="80" width="20" height="20" fill="#000"/>
+                                    <rect x="140" y="80" width="20" height="20" fill="#fff"/>
+                                    
+                                    <rect x="0" y="100" width="20" height="20" fill="#fff"/>
+                                    <rect x="20" y="100" width="20" height="20" fill="#000"/>
+                                    <rect x="40" y="100" width="20" height="20" fill="#fff"/>
+                                    <rect x="60" y="100" width="20" height="20" fill="#000"/>
+                                    <rect x="80" y="100" width="20" height="20" fill="#fff"/>
+                                    <rect x="100" y="100" width="20" height="20" fill="#000"/>
+                                    <rect x="120" y="100" width="20" height="20" fill="#fff"/>
+                                    <rect x="140" y="100" width="20" height="20" fill="#000"/>
+                                    
+                                    <rect x="0" y="120" width="20" height="20" fill="#000"/>
+                                    <rect x="20" y="120" width="20" height="20" fill="#fff"/>
+                                    <rect x="40" y="120" width="20" height="20" fill="#000"/>
+                                    <rect x="60" y="120" width="20" height="20" fill="#fff"/>
+                                    <rect x="80" y="120" width="20" height="20" fill="#000"/>
+                                    <rect x="100" y="120" width="20" height="20" fill="#fff"/>
+                                    <rect x="120" y="120" width="20" height="20" fill="#000"/>
+                                    <rect x="140" y="120" width="20" height="20" fill="#fff"/>
+                                    
+                                    <rect x="0" y="140" width="20" height="20" fill="#fff"/>
+                                    <rect x="20" y="140" width="20" height="20" fill="#000"/>
+                                    <rect x="40" y="140" width="20" height="20" fill="#fff"/>
+                                    <rect x="60" y="140" width="20" height="20" fill="#000"/>
+                                    <rect x="80" y="140" width="20" height="20" fill="#fff"/>
+                                    <rect x="100" y="140" width="20" height="20" fill="#000"/>
+                                    <rect x="120" y="140" width="20" height="20" fill="#fff"/>
+                                    <rect x="140" y="140" width="20" height="20" fill="#000"/>
+                                    
+                                    <!-- Corner squares -->
+                                    <rect x="0" y="0" width="60" height="60" fill="none" stroke="#000" stroke-width="8"/>
+                                    <rect x="20" y="20" width="20" height="20" fill="#000"/>
+                                    
+                                    <rect x="100" y="0" width="60" height="60" fill="none" stroke="#000" stroke-width="8"/>
+                                    <rect x="120" y="20" width="20" height="20" fill="#000"/>
+                                    
+                                    <rect x="0" y="100" width="60" height="60" fill="none" stroke="#000" stroke-width="8"/>
+                                    <rect x="20" y="120" width="20" height="20" fill="#000"/>
+                                </svg>
+                            </div>
+                            <div style="margin-top: 10px; font-size: 12px; color: #666;">
+                                Halmeoni's House<br>
+                                +63 912 345 6789
+                            </div>
+                        </div>
+                        
+                        <div style="background: #e8f4fd; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            <p style="color: #007bff; font-size: 14px; margin-bottom: 5px;">📱 Open your GCash app</p>
+                            <p style="color: #007bff; font-size: 14px; margin-bottom: 5px;">📷 Scan the QR code above</p>
+                            <p style="color: #007bff; font-size: 14px;">💳 Complete the payment</p>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px;">
+                            <button onclick="closeModal(); showPaymentOptions();" style="flex: 1; background: #ccc; color: #333; border: none; padding: 12px; border-radius: 8px; cursor: pointer;">Back</button>
+                            <button onclick="confirmGCashPayment()" style="flex: 2; background: #007bff; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer;">I've Paid</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', gcashModal);
+        }
+
+        function confirmGCashPayment() {
+            closeModal();
+            showProcessingOrder();
+        }
+
+        function showProcessingOrder() {
+            const processingModal = `
+                <div id="processingModal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: white; padding: 40px; border-radius: 15px; max-width: 350px; width: 90%; text-align: center;">
+                        <div style="margin-bottom: 20px;">
+                            <div style="width: 60px; height: 60px; border: 4px solid #f3f3f3; border-top: 4px solid #d32f2f; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+                        </div>
+                        <h3 style="color: #d32f2f; margin-bottom: 15px;">Processing Your Order...</h3>
+                        <p style="color: #666;">Please wait while we confirm your order</p>
+                    </div>
+                </div>
+                <style>
+                    @keyframes spin {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+                </style>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', processingModal);
+            
+            // Show processing for 3 seconds, then show confirmation
+            setTimeout(() => {
+                closeModal();
+                showOrderConfirmation();
+            }, 3000);
+        }
+
+        function showOrderConfirmation() {
+            const deliveryTime = window.selectedDeliveryMethod === 'delivery' ? '30-45 minutes' : '15 minutes';
+            const deliveryText = window.selectedDeliveryMethod === 'delivery' ? 'on the way' : 'ready for pickup';
+            
+            const confirmationModal = `
+                <div id="confirmationModal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: white; padding: 40px; border-radius: 15px; max-width: 350px; width: 90%; text-align: center;">
+                        <div style="margin-bottom: 20px;">
+                            <div style="width: 60px; height: 60px; background: #4caf50; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: white; font-size: 24px;">✓</div>
+                        </div>
+                        <h3 style="color: #4caf50; margin-bottom: 15px;">Order Confirmed!</h3>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: left;">
+                            <h4 style="color: #d32f2f; margin-bottom: 10px;">🍳 Your food is preparing in our kitchen</h4>
+                            <p style="color: #666; margin-bottom: 10px;">Estimated time: ${deliveryTime}</p>
+                            <p style="color: #666; margin-bottom: 10px;">Method: ${window.selectedDeliveryMethod === 'delivery' ? 'Delivery' : 'Pickup'}</p>
+                            <p style="color: #666;">Payment: ${window.selectedPaymentMethod === 'cod' ? 'Cash on ' + (window.selectedDeliveryMethod === 'delivery' ? 'Delivery' : 'Pickup') : 'GCash'}</p>
+                        </div>
+                        <div style="background: #e8f5e8; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            <p style="color: #4caf50; font-weight: bold;">🚚 Your order will be ${deliveryText} in ${deliveryTime}!</p>
+                        </div>
+                        <button onclick="finishOrder()" style="background: #d32f2f; color: white; border: none; padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 16px; width: 100%;">Done</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', confirmationModal);
+        }
+
+        function finishOrder() {
+            closeModal();
+            
+            // Clear cart
+            cart = [];
+            updateCartDisplay();
+            updateCartCount();
+            
+            // Show home section
+            showSection('home');
+            
+            // Clear stored delivery method and payment method
+            delete window.selectedDeliveryMethod;
+            delete window.selectedPaymentMethod;
+            delete window.deliveryFee;
+        }
+
+        function closeModal() {
+            const modals = ['deliveryModal', 'paymentModal', 'processingModal', 'confirmationModal', 'gcashModal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        
+
+        // Initialize cart display
+        updateCartDisplay();
+        updateCartCount();
+    </script>
+</body>
+
+</html>
