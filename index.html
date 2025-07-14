@@ -10,7 +10,45 @@
     <title>Halmeoni</title>
 </head>
 <body>
-    <body>
+        <div class="container">
+         <div id="promoPopup" class="popup-overlay">
+        <div class="popup-modal">
+            <div class="popup-header">
+                <button class="popup-close" onclick="closePopup()">&times;</button>
+                <div class="popup-title">🎉 Special Offers!</div>
+                <div class="popup-subtitle">Limited Time Deals at Halmeoni's House</div>
+            </div>
+            <div class="popup-content">
+                <div class="promo-item">
+                    <div class="promo-badge">DINE-IN SPECIAL</div>
+                    <div class="promo-title">20% OFF for Dine-In</div>
+                    <div class="promo-description">Enjoy 20% discount on all menu items when you dine in at our restaurant!</div>
+                    <div class="promo-code">DINEIN20</div>
+                    <div class="promo-validity">Valid until July 31, 2025</div>
+                </div>
+                <div class="promo-item">
+                    <div class="promo-badge">WEEKEND TREAT</div>
+                    <div class="promo-title">Buy 2 Get 1 Free Kimbap</div>
+                    <div class="promo-description">Every Saturday & Sunday - Buy 2 Traditional Kimbap and get 1 FREE!</div>
+                    <div class="promo-code">WEEKEND3</div>
+                    <div class="promo-validity">Weekends only</div>
+                </div>
+                <div class="promo-item">
+                    <div class="promo-badge">FIRST TIME</div>
+                    <div class="promo-title">₱50 OFF First Order</div>
+                    <div class="promo-description">New customers get ₱50 off on orders above ₱300!</div>
+                    <div class="promo-code">NEWBIE50</div>
+                    <div class="promo-validity">For new customers only</div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-cta" onclick="closePopup()">Start Ordering Now! 🍽️</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
     <!-- Header -->
     <header class=" header">
         <div class="container">
@@ -43,7 +81,7 @@
             </div>
             
             <div class="about-content">
-                <h2>Featured Today</h2>
+                <h2>Halmeoni's Favorite</h2>
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="menu-item-image">
@@ -60,7 +98,7 @@
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-image">
-                        <img src="assets/img/dakgalbi2.jpg" alt="Dakgalbi">
+                        <img src="assets/img/dakgalbi3.jpg" alt="Dakgalbi">
                     </div>
                     </div>
                         <div class="menu-item-content">
@@ -78,7 +116,7 @@
 
         <!-- Menu Section -->
         <section id="menu" class="content-section">
-            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px;">Our Menu</h2>
+            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px; margin-left: 15px;">Our Menu</h2>
             <div class="menu-grid">
                 <div class="menu-item">
                 <div class="menu-item-image">
@@ -121,7 +159,7 @@
                 </div>
                 <div class="menu-item">
                 <div class="menu-item-image">
-                <img src="assets/img/dakgalbi2.jpg" alt="Dakgalbi">
+                <img src="assets/img/dakgalbi3.jpg" alt="Dakgalbi">
                 </div>
                     <div class="menu-item-content">
                         <div class="menu-item-title">Spicy Dakgalbi</div>
@@ -134,7 +172,7 @@
                 </div>
                 <div class="menu-item">
                 <div class="menu-item-image">
-                <img src="assets/img/chicken.jpeg" alt="Soy Chicken">
+                <img src="assets/img/chick.jpg" alt="Soy Chicken">
                 </div>
                     <div class="menu-item-content">
                         <div class="menu-item-title">Korean Soy Chicken</div>
@@ -147,7 +185,7 @@
                 </div>
                 <div class="menu-item">
                 <div class="menu-item-image">
-                <img src="assets/img/kimchi.jpg" alt="Kimchi Fried Rice">
+                <img src="assets/img/kimchi2.jpg" alt="Kimchi Fried Rice">
                     </div>
                     <div class="menu-item-content">
                         <div class="menu-item-title">Kimchi Fried Rice</div>
@@ -199,20 +237,20 @@
 
         <!-- Reviews Section -->
         <section id="reviews" class="content-section">
-            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px;">Customer Reviews</h2>
+            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px; margin-left: 15px;">Customer Reviews</h2>
             <div class="review-item">
                 <div class="review-header">
                     <strong>CJ Frances Garibay</strong>
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
                 </div>
-                <div class="review-text">The kimbap here is absolutely delicious! Fresh ingredients and perfectly seasoned rice. Will definitely order again!</div>
+                <div class="review-text">The dakgalbi was super sarap, grabe! Lasang lasa mo yung spices sakto ang timpla. Sobrang na enjoy ko, sulit talaga. Malambot yung meat and nakakabitin in a good way. Will definitely order again!</div>
             </div>
             <div class="review-item">
                 <div class="review-header">
                     <strong>Keer Dela Cruz</strong>
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-stars">⭐⭐⭐</div>
                 </div>
-                <div class="review-text">Amazing dakgalbi! The spice level is perfect and the chicken is so tender. Sarap talaga!</div>
+                <div class="review-text">The kimbap was a bit soggy, and medyo kulang sa lasa. Akala ko mas flavorful siya. Sayang, I was super excited pa naman. Pwede siguro i-improve yung freshness and timpla. Okay lang overall, pero hindi ko siguro uulitin soon.</div>
             </div>
             <div class="review-item">
                 <div class="review-header">
@@ -226,7 +264,7 @@
                     <strong>Sydney Golez</strong>
                     <div class="review-stars">⭐⭐⭐⭐</div>
                 </div>
-                <div class="review-text">Good portion sizes and reasonable prices. The tteokbokki is my favorite - perfect balance of sweet and spicy!</div>
+                <div class="review-text">"The dakgalbi was okay lang, medyo kulang sa flavor. Lasang mild, so bitin ng konti. Pwede pa siguro i-enhance yung timpla para mas satisfying. Not bad, pero may room for improvement.</div>
             </div>
         </section>
 
@@ -270,7 +308,7 @@
 
         <!-- Cart Section -->
         <section id="cart" class="content-section">
-            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px;">Your Cart</h2>
+            <h2 style="color: #d32f2f; margin: 20px 0; font-size: 24px; margin-left: 15px;">Your Cart</h2>
             <div id="cartItems"></div>
             <div class="cart-total">
                 <h3>Total: ₱<span id="totalAmount">0</span></h3>
@@ -306,6 +344,45 @@
     <script>
         let cart = [];
         let currentSection = 'home';
+
+
+// Show popup when page loads
+window.addEventListener('load', function() {
+    // Show popup after a short delay for better user experience
+    setTimeout(showPopup, 500);
+});
+
+// Show popup function
+function showPopup() {
+    const popup = document.getElementById('promoPopup');
+    popup.classList.remove('hidden');
+    
+    // Prevent body scroll when popup is open
+    document.body.style.overflow = 'hidden';
+}
+
+// Close popup function
+function closePopup() {
+    const popup = document.getElementById('promoPopup');
+    popup.classList.add('hidden');
+    
+    // Restore body scroll
+    document.body.style.overflow = 'auto';
+}
+
+// Close popup when clicking outside the modal
+document.getElementById('promoPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closePopup();
+    }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closePopup();
+    }
+});
 
         function showSection(sectionName) {
             // Hide all sections
